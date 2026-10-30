@@ -18,7 +18,7 @@ def cli():
 @click.option("--fps", default=DEFAULT_FPS, type=int, help="Frames per second.")
 @click.option("--width", default=DEFAULT_WIDTH, type=int, help="Video width in pixels.")
 @click.option("--height", default=DEFAULT_HEIGHT, type=int, help="Video height in pixels.")
-@click.option("--audio/no-audio", default=True, help="Include AI generated ambient soundtrack.")
+@click.option("--audio/--no-audio", default=True, help="Include AI generated ambient soundtrack.")
 @click.option("--api-key", envvar="GEMINI_API_KEY", help="Gemini API Key.")
 @click.option("--blender-path", envvar="BLENDER_PATH", help="Path to Blender executable.")
 def generate(prompt, output, duration, fps, width, height, audio, api_key, blender_path):
