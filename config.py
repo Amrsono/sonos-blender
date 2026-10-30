@@ -37,7 +37,7 @@ def find_blender():
 BLENDER_EXECUTABLE = find_blender()
 
 # Gemini AI Configuration
-GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-2.5-flash")
+GEMINI_MODEL = os.environ.get("GEMINI_MODEL", "gemini-3.8-flash")
 
 # Render Defaults
 DEFAULT_WIDTH = 1920
