@@ -1,0 +1,36 @@
+# Environment & Secrets
+.env
+.env.local
+
+# Outputs & Rendered Artifacts
+output/
+generated_scripts/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# OS files
+.DS_Store
+Thumbs.db
+~$*

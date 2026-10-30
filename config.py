@@ -1,5 +1,9 @@
 import os
 from pathlib import Path
+from dotenv import load_dotenv
+
+# Load environment variables from .env file if present
+load_dotenv()
 
 # Project Directories
 ROOT_DIR = Path(__file__).parent.absolute()
@@ -10,13 +14,11 @@ SCRIPTS_DIR = ROOT_DIR / "generated_scripts"
 SCRIPTS_DIR.mkdir(exist_ok=True, parents=True)
 
 # Blender Configuration
-# Attempts common default paths for Blender across platforms if BLENDER_PATH env var is not set
 def find_blender():
     env_path = os.environ.get("BLENDER_PATH")
     if env_path and Path(env_path).exists():
         return env_path
 
-    # Common locations
     common_paths = [
         r"C:\Program Files\Blender Foundation\Blender 4.3\blender.exe",
         r"C:\Program Files\Blender Foundation\Blender 4.2\blender.exe",
@@ -30,7 +32,7 @@ def find_blender():
     for p in common_paths:
         if Path(p).exists():
             return p
-    return "blender" # fallback to PATH
+    return "blender"
 
 BLENDER_EXECUTABLE = find_blender()
 
